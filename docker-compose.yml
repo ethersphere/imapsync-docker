@@ -1,0 +1,30 @@
+#version: '3.8'
+#
+# Use imapsync to transfer email from gmail to your IMAP server.
+#
+# Using Dovecot, so it works OK, for other IMAP servers read the docs and adjust accordingly.
+#
+
+services:
+  imapsync:
+    image: gilleslamiral/imapsync:latest
+    container_name: imapsync
+    volumes:
+      - ./logs:/var/tmp
+    environment:
+      - IMAPSYNC_PASSWORD1=${IMAPSYNC_PASSWORD1}
+      - IMAPSYNC_PASSWORD2=${IMAPSYNC_PASSWORD2}
+    command: 
+      - imapsync
+      - --gmail1
+      - --user1
+      - ${USER1}
+      - --host2
+      - ${HOST2}
+      - --ssl2
+      - --port2
+      - ${PORT2}
+      - --user2
+      - ${USER2}
+      - --noreleasecheck
+      - --log
