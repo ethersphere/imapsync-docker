@@ -33,6 +33,11 @@ The `logs` folder contains the logs so you can look at what happened.
 
 You can run this multiple times with no ill effect, except deleted messages on the new host will reappear.
 
+Because gmail is wonky it will seem like there are more messages there than are transferred. This is because there are a lot of duplicates that are tagged and when accessing them via IMAP they look like the same message in different folders.
+
+![end result when running imapsync](docs/imapsync-result.png)
+
+
 ## WARNING
 When you are done you **HAVE TO** remove the `.env` file which contains your passwords.
 
