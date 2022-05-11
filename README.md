@@ -37,6 +37,8 @@ Because gmail is wonky it will seem like there are more messages there than are 
 
 ![end result when running imapsync](docs/imapsync-result.png)
 
+You can run the sync multiple times, it will only transfer the new messages and will NOT delete the messages that were deleted on the side of Google. If you want that, add the option `--delete2` to your docker-compose.yml. WARNING! This will delete mail that was possibly delivered to your new mailbox, so handle with care. Ask if you're not sure.
+
 
 ## WARNING
 When you are done you **HAVE TO** remove the `.env` file which contains your passwords.
