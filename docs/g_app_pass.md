@@ -1,4 +1,4 @@
-# How to get application password on Google
+# How to get an application password on Google
 
 Go to [your account -> app password](https://myaccount.google.com/apppasswords).
 
